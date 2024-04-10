@@ -14,7 +14,7 @@ const app = express()
 
 // Set up mongoose connection
 mongoose.set("strictQuery", false)
-const dev_db_url = `mongodb+srv://rajsv04:csNqYNF3snZc82Zi@odincluster.ytahoml.mongodb.net/?retryWrites=true&w=majority&appName=OdinCluster`
+const dev_db_url = `mongodb+srv://rajsv04:csNqYNF3snZc82Zi@odincluster.ytahoml.mongodb.net/inventory-application?retryWrites=true&w=majority&appName=OdinCluster`
 const mongodb = process.env.MONGODB_URI || dev_db_url
 function main() {
   return mongoose.connect(mongodb)
