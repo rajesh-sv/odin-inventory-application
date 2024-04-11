@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  h1 Category: #{category.name}
+  p #[strong Description: ] #{category.description}
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Spaceships
+    if allItemsInCategory.length
+      dl
+        each item in allItemsInCategory
+          dt
+            a(href=item.url) #{item.name}
+          dd #{item.description}
+    else
+      p This category has no spaceships.
+  hr
+  p
+    a(href=category.url+'/delete') Delete Category
+    br
+    a(href=category.url+'/update') Update Category
